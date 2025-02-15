@@ -62,6 +62,8 @@ python ebs_permission_analyzer.py
 ## Sample Output
 
 ```
+$ python ebs_permission_analyzer.py
+
 Select the API action to scan for:
 1. ec2:CreateVolume
 2. ec2:CopySnapshot
@@ -115,6 +117,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support, please create an issue in the GitHub repository or contact the maintainers.
 
-## Authors
+## Author
 
 - [Tuhin Mukherjee](https://github.com/tuhinmukherjee)

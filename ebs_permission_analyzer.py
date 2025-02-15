@@ -1,6 +1,6 @@
 #########################################################################################
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.                    #
-# SPDX-License-Identifier: Apache-2.0                                                   #
+#       Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.              #
+#                 SPDX-License-Identifier: Apache-2.0                                   #
 #                                                                                       #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this  #
 # software and associated documentation files (the "Software"), to deal in the Software #
@@ -35,7 +35,7 @@ def check_aws_credentials():
     except (NoCredentialsError, ClientError):
         return False
 
-# Prompt user to manually enter AWS credentials when the script can't find them in env variables.
+# Prompt user to manually enter AWS credentials when script can't find them in env variables.
 def get_manual_credentials():
     logger.info("\nAWS credentials not found. Please enter your credentials manually.")
     while True:
@@ -122,7 +122,7 @@ def check_policy_for_action(policy_document, action_to_find):
 
             # 7. Check if action is allowed through Actions
             for allowed_action in actions:
-                if (allowed_action == '*' or                    # Allows all actions
+                if (allowed_action == '*' or                   # Allows all actions
                     allowed_action == 'ec2:*' or               # Allows all EC2 actions
                     fnmatch.fnmatch(action_to_find.lower(),    # Matches specific action
                                   allowed_action.lower())):
